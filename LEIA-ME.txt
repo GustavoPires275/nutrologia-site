@@ -1,0 +1,30 @@
+SITE NUTROLOGIA — CHECKLIST ANTES DE PUBLICAR
+
+1. Abra index.html e preencha o objeto CONFIG (início do <script>) SOMENTE com dados reais:
+   nome, CRM, RQE, formação, especializações, experiência, cidade, endereço,
+   horários, WhatsApp (só dígitos com 55 + DDD), e-mail, Instagram, URL do site.
+   Campos vazios aparecem marcados como "a preencher" (listra dourada).
+2. Foto profissional: salve em img/medico.webp (800x1000, < 200 KB) e coloque "img/medico.webp" em CONFIG.foto.
+3. Crie img/og.jpg (1200x630) para compartilhamento em redes sociais.
+4. Troque "SEU-DOMINIO.com.br" em index.html, robots.txt e sitemap.xml.
+5. O Schema.org (Physician) só é gerado quando nome e CRM estiverem preenchidos.
+6. Revisão médica obrigatória: artigos, áreas de atuação, FAQ, política de privacidade e termos
+   devem ser revisados e aprovados pelo médico responsável (Resolução CFM 2.336/2023).
+7. Depoimentos: só com autorização escrita do paciente (CONFIG.depoimentos).
+8. Hospedagem: qualquer host estático (Netlify, Vercel, Hostinger). Ative HTTPS.
+
+VERSÃO 3 — EXPERIÊNCIAS
+- Hero 3D (three.js r128, carregado sob demanda do cdnjs). Sem WebGL, volta para a versão 2D automaticamente.
+- A luz do hero muda com a hora local do visitante (manhã, dia, entardecer, noite).
+- Planta que cresce pela margem conforme a rolagem.
+- Mapa do organismo (#organismo) e Simulador do dia (#simulador): textos educativos,
+  também precisam de revisão médica. O simulador não salva nem envia nada.
+- Som ambiente gerado no navegador, desligado por padrão (botão "Som" no cabeçalho).
+- Com "reduzir movimento" ativo no sistema, tudo aparece estático e completo.
+
+DESEMPENHO (celulares fracos)
+- O site detecta o aparelho e escolhe um nível: alto (computador), médio (celular) ou leve.
+- Leve: sem 3D (não baixa o three.js), foto estática no hero, sem textura granulada e sem vidro fosco.
+- Médio: 3D em resolução reduzida e limitado a 30 quadros por segundo.
+- Em qualquer nível, se a taxa de quadros cair, o 3D desliga sozinho e a foto assume.
+- Para testar um nível específico, abra o site com #perf-low, #perf-mid ou #perf-high no fim do endereço.
